@@ -1,6 +1,6 @@
 test:
-  sessions:
+  clients:
     default:
       database: mongoid-store
-      hosts:  
+      hosts:
         - localhost:27017
