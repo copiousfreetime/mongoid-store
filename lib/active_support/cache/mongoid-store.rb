@@ -77,7 +77,7 @@ module ActiveSupport
           def Entry.data_for(entry)
             value = entry.instance_variable_get('@value')
             marshaled = value.nil? ? Marshal.dump(value) : value
-            Moped::BSON::Binary.new(:generic, marshaled)
+            ::BSON::Binary.new(:generic, marshaled)
           end
 
         else
@@ -85,7 +85,7 @@ module ActiveSupport
           def Entry.data_for(entry)
             v = entry.instance_variable_get('@v')
             marshaled = entry.send('compressed?') ? v : entry.send('compress', v)
-            Moped::BSON::Binary.new(:generic, marshaled)
+            ::BSON::Binary.new(:generic, marshaled)
           end
 
         end

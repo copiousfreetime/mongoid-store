@@ -70,7 +70,7 @@ describe ActiveSupport::Cache::MongoidStore do
 
     it "can write non-utf data" do
       document.should_not be_nil
-      document['data'].should be_instance_of(Moped::BSON::Binary)
+      document['data'].should be_instance_of(::BSON::Binary)
     end
 
     it "can read non-utf data" do

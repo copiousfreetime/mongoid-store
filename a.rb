@@ -6,7 +6,7 @@ string = Marshal.dump("\255")
 
 marshaled = Marshal.dump(string)
 
-binary = Moped::BSON::Binary.new(:generic, marshaled)
+binary = ::BSON::Binary.new(:generic, marshaled)
 
 unmarshaled = Marshal.load(binary.to_s)
 
