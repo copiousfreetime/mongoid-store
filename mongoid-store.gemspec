@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.summary      = "Rails Mongoid 3 Cache store"
   s.license      = "Same as Ruby's"
 
-  s.add_dependency 'mongoid',       '>= 3'
-  s.add_dependency 'activesupport', '>= 3'
+  s.add_dependency 'mongoid',       '>= 6'
+  s.add_dependency 'activesupport', '>= 5'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
